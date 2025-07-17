@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Macomg - Complete E-commerce Store</title>
+    <link rel="stylesheet" href="css/style-enhanced.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Simo Rzik9allah</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="login.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to simo site </h1>
+            <h2>Your Complete E-commerce Destination</h2>
+            <p>Discover premium products with seamless shopping experience</p>
+            <div class="hero-buttons">
+                <button class="cta-button" onclick="window.location.href='#products'">Shop Now</button>
+                <button class="secondary-button" onclick="window.location.href='#categories'">Browse Categories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=300" alt="Electronics">
+                    <h3>Electronics</h3>
+                    <p>Latest gadgets and tech</p>
+                    <a href="https://wa.me/212617726160?text=Hi%20I'm%20interested%20in%20Electronics" class="btn" target="_blank">Shop via WhatsApp</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300" alt="Fashion">
+                    <h3>Fashion</h3>
+                    <p>Trendy clothing & accessories</p>
+                    <a href="https://wa.me/212617726160?text=Hi%20I'm%20interested%20in%20Fashion" class="btn" target="_blank">Shop via WhatsApp</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=300" alt="Home">
+                    <h3>Home & Living</h3>
+                    <p>Decorate your space</p>
+                    <a href="https://wa.me/212617726160?text=Hi%20I'm%20interested%20in%20Home%20&%20Living" class="btn" target="_blank">Shop via WhatsApp</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=300" alt="Sports">
+                    <h3>Sports & Outdoors</h3>
+                    <p>Active lifestyle gear</p>
+                    <a href="https://wa.me/212617726160?text=Hi%20I'm%20interested%20in%20Sports" class="btn" target="_blank">Shop via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="electronics">Electronics</button>
+                <button class="filter-btn" data-filter="fashion">Fashion</button>
+                <button class="filter-btn" data-filter="home">Home</button>
+            </div>
+            <div class="product-grid" id="featured-products">
+                <!-- Sample Product 1 -->
+                <div class="product-card" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Wireless Headphones">
+                        <div class="product-badge">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Wireless Headphones</h3>
+                        <p class="product-description">High-quality sound with noise cancellation</p>
+                        <div class="product-price">
+                            <span class="current-price">$129.99</span>
+                            <span class="original-price">$179.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" onclick="addToCart('headphones')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="buy-now-btn" onclick="buyNow('headphones')">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 2 -->
+                <div class="product-card" data-category="fashion">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Smart Watch">
+                        <div class="product-badge">Hot</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Fitness Watch</h3>
+                        <p class="product-description">Track your health and fitness goals</p>
+                        <div class="product-price">
+                            <span class="current-price">$89.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" onclick="addToCart('smartwatch')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="buy-now-btn" onclick="buyNow('smartwatch')">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 3 -->
+                <div class="product-card" data-category="home">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" alt="Running Shoes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Athletic Running Shoes</h3>
+                        <p class="product-description">Comfortable and durable for daily runs</p>
+                        <div class="product-price">
+                            <span class="current-price">$79.99</span>
+                            <span class="original-price">$99.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" onclick="addToCart('shoes')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="buy-now-btn" onclick="buyNow('shoes')">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 4 -->
+                <div class="product-card" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f5a0a2f8?w=300" alt="Sunglasses">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Sunglasses</h3>
+                        <p class="product-description">UV protection with style</p>
+                        <div class="product-price">
+                            <span class="current-price">$49.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.2)</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" onclick="addToCart('sunglasses')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="buy-now-btn" onclick="buyNow('sunglasses')">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 5 -->
+                <div class="product-card" data-category="home">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300" alt="Backpack">
+                    </div>
+                    <div class="product-info">
+                        <h3>Travel Backpack</h3>
+                        <p class="product-description">Water-resistant with laptop compartment</p>
+                        <div class="product-price">
+                            <span class="current-price">$59.99</span>
+                            <span class="original-price">$79.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" onclick="addToCart('backpack')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="buy-now-btn" onclick="buyNow('backpack')">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 6 -->
+                <div class="product-card" data-category="fashion">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=300" alt="T-Shirt">
+                        <div class="product-badge">Sale</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cotton T-Shirt</h3>
+                        <p class="product-description">100% organic cotton, comfortable fit</p>
+                        <div class="product-price">
+                            <span class="current-price">$24.99</span>
+                            <span class="original-price">$34.99</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.1)</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" onclick="addToCart('tshirt')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="buy-now-btn" onclick="buyNow('tshirt')">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose simo site</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Fast Shipping</h3>
+                    <p>Quick delivery worldwide</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure transactions</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-undo"></i>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Always here to help</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Get exclusive offers and new product updates</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212617726160" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Simo Rzik9allah</h3>
+                    <p>Your trusted e-commerce destination for quality products at great prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns & Exchanges</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: support@simosite.com</p>
+                    <p>Phone: +212617-726160</p>
+                    <p>Address: Sidi bennour</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 simo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script-enhanced.js"></script>
+    <script>
+        // Enhanced cart functionality
+        let cart = [];
+        
+        function addToCart(productId) {
+            // Simple cart counter
+            const cartCount = document.querySelector('.cart-count');
+            let currentCount = parseInt(cartCount.textContent);
+            cartCount.textContent = currentCount + 1;
+            
+            // Show confirmation
+            alert(`Product added to cart!`);
+            
+            // Add to cart array (for future use)
+            cart.push(productId);
+            console.log('Cart contents:', cart);
+        }
+        
+        function buyNow(productId) {
+            // Add product to cart and redirect to checkout
+            cart.push(productId);
+            console.log('Buying now:', productId);
+            
+            // Redirect to checkout page
+            window.location.href = '../Site/checkout.html';
+        }
+        
+        // Filter functionality for buttons
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+                const products = document.querySelectorAll('.product-card');
+                
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter products
+                products.forEach(product => {
+                    if (filter === 'all' || product.dataset.category === filter) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Newsletter form
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
